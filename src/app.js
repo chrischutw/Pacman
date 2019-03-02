@@ -13,6 +13,8 @@ rl.question('Please place the position(x,y,f) of Pacman\n', answer => {
     const position = answer[1].split(',');
     if (map.validation(position[0], position[1], position[2])) {
       map.placeFunction(position[0], position[1], position[2]);
+    } else {
+      return false;
     }
   } else {
     console.log('Please restart the game');
